@@ -10,6 +10,11 @@ namespace Entidades
     {
         private double numero;
 
+        /// <summary>
+        /// Valida si el string ingresado es un numero
+        /// </summary>
+        /// <param name="srtNumero">el numero en formato de string</param>
+        /// <returns>devuelve el string en un tipo double</returns>
         private double ValidarNumero(string srtNumero)
         {
             
@@ -80,8 +85,9 @@ namespace Entidades
             } 
             return rtn;
             
-
         }
+
+        
 
 
 

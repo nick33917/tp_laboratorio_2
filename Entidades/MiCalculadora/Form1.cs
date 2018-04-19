@@ -17,6 +17,7 @@ namespace MiCalculadora
         public LaCalculadora()
         {
             InitializeComponent();
+            lblResultado.Text = "";
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -24,12 +25,17 @@ namespace MiCalculadora
 
         }
 
-        private void btnLimpiar_Click(object sender, EventArgs e)
+        private void Limpiar()
         {
             this.txtNumero1.Clear();
             this.txtNumero2.Clear();
-            this.lblResultado.Text ="" ;
-            this.cmbOperador.Text ="" ;
+            this.lblResultado.Text = "";
+            this.cmbOperador.Text = "";
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            this.Limpiar();
             
         }
 
@@ -54,22 +60,44 @@ namespace MiCalculadora
             string num1 = txtNumero1.Text;
             string num2 = txtNumero2.Text;
             string operador = cmbOperador.Text;
-            double resultado = LaCalculadora.Operar(num1, num2, operador);
-            lblResultado.Visible = true;
-            lblResultado.Text = resultado.ToString();
+            if (operador == "/" && num2 == "0")
+            {
+                MessageBox.Show("No se puede dividir por 0", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                lblResultado.Visible = true;
+                double resultado = LaCalculadora.Operar(num1, num2, operador);
+                lblResultado.Text = resultado.ToString();
+            }
 
         }
 
         private void btnConvertirABinario_Click(object sender, EventArgs e)
         {
-             string resultado = Numero.DecimalBinario(Convert.ToDouble(lblResultado.Text));
-             lblResultado.Text = resultado;
+            if (lblResultado.Text != "")
+            {
+                string resultado = Numero.DecimalBinario(Convert.ToDouble(lblResultado.Text));
+                lblResultado.Text = resultado;
+            }
+            else
+            {
+                MessageBox.Show("No hay resultado para convertir a Binario", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
         }
 
         private void btnConvertirADecimal_Click(object sender, EventArgs e)
         {
-              string resultado = Numero.BinarioDecimal(lblResultado.Text);
-              lblResultado.Text = resultado;
+            if (lblResultado.Text != "")
+            {
+                string resultado = Numero.BinarioDecimal(lblResultado.Text);
+                lblResultado.Text = resultado;
+            }
+            else
+            {
+                MessageBox.Show("No hay resultado para convertir a Decimal", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
          }
 
         private void lblResultado_Click(object sender, EventArgs e)
