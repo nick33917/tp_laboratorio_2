@@ -12,3 +12,7 @@ C:\Users\nick3\Desktop\Program II\Tp2-Laboratorio2\TP-02\Entidades\obj\Debug\Ent
 C:\Users\nick3\Desktop\Program II\Tp2-Laboratorio2\TP-02\Entidades\obj\Debug\Entidades.pdb
 C:\Users\nick3\Desktop\Program II\Tp2-Laboratorio2\TP-02\Entidades\bin\Debug\Entidades.dll
 C:\Users\nick3\Desktop\Program II\Tp2-Laboratorio2\TP-02\Entidades\bin\Debug\Entidades.pdb
+C:\Users\nick3\Desktop\Pruevaaaaaa\Tp_laboratorio_2(NicolasFattori2°A)\Entidades\bin\Debug\Entidades.dll
+C:\Users\nick3\Desktop\Pruevaaaaaa\Tp_laboratorio_2(NicolasFattori2°A)\Entidades\bin\Debug\Entidades.pdb
+C:\Users\nick3\Desktop\Pruevaaaaaa\Tp_laboratorio_2(NicolasFattori2°A)\Entidades\obj\Debug\Entidades.dll
+C:\Users\nick3\Desktop\Pruevaaaaaa\Tp_laboratorio_2(NicolasFattori2°A)\Entidades\obj\Debug\Entidades.pdb
